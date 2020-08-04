@@ -1,0 +1,181 @@
+{
+    "author": {
+        "email": "benkatz@mit.edu",
+        "name": "Ben Katz"
+    },
+    "description": {
+        "EN": "CAM job description goes here."
+    },
+    "output_type": "directory",
+    "outputs": [
+        {
+            "filename_prefix": "CAMOutputs/GerberFiles",
+            "format_specifier": {
+                "decimal": 4,
+                "integer": 3
+            },
+            "generate_job_file": true,
+            "output_type": "gerber",
+            "outputs": [
+                {
+                    "advanced_options": {
+                        "mirror": false,
+                        "offset_x": 0,
+                        "offset_y": 0,
+                        "rotate": false,
+                        "upside_down": false
+                    },
+                    "board_outline": true,
+                    "config": {
+                        "description": "plc",
+                        "file_function": "Other"
+                    },
+                    "filename_format": "%P/%N/%N.plc",
+                    "layers": [
+                        20,
+                        21,
+                        25,
+                        51
+                    ],
+                    "milling": true,
+                    "name": "plc",
+                    "polarity": "positive",
+                    "type": "gerber_layer"
+                },
+                {
+                    "advanced_options": {
+                        "mirror": false,
+                        "offset_x": 0,
+                        "offset_y": 0,
+                        "rotate": false,
+                        "upside_down": false
+                    },
+                    "board_outline": false,
+                    "config": {
+                        "description": "cmp",
+                        "file_function": "Other"
+                    },
+                    "filename_format": "%P/%N/%N.cmp",
+                    "layers": [
+                        1,
+                        17,
+                        18
+                    ],
+                    "milling": false,
+                    "name": "cmp",
+                    "polarity": "positive",
+                    "type": "gerber_layer"
+                },
+                {
+                    "advanced_options": {
+                        "mirror": false,
+                        "offset_x": 0,
+                        "offset_y": 0,
+                        "rotate": false,
+                        "upside_down": false
+                    },
+                    "board_outline": false,
+                    "config": {
+                        "description": "sol",
+                        "file_function": "Other"
+                    },
+                    "filename_format": "%P/%N/%N.sol",
+                    "layers": [
+                        16,
+                        17,
+                        18
+                    ],
+                    "milling": false,
+                    "name": "sol",
+                    "polarity": "positive",
+                    "type": "gerber_layer"
+                },
+                {
+                    "advanced_options": {
+                        "mirror": false,
+                        "offset_x": 0,
+                        "offset_y": 0,
+                        "rotate": false,
+                        "upside_down": false
+                    },
+                    "board_outline": false,
+                    "config": {
+                        "description": "stc",
+                        "file_function": "Other"
+                    },
+                    "filename_format": "%P/%N/%N.stc",
+                    "layers": [
+                        29
+                    ],
+                    "milling": false,
+                    "name": "stc",
+                    "polarity": "positive",
+                    "type": "gerber_layer"
+                },
+                {
+                    "advanced_options": {
+                        "mirror": false,
+                        "offset_x": 0,
+                        "offset_y": 0,
+                        "rotate": false,
+                        "upside_down": false
+                    },
+                    "board_outline": false,
+                    "config": {
+                        "description": "sts",
+                        "file_function": "Other"
+                    },
+                    "filename_format": "%P/%N/%N.sts",
+                    "layers": [
+                        30
+                    ],
+                    "milling": false,
+                    "name": "sts",
+                    "polarity": "positive",
+                    "type": "gerber_layer"
+                }
+            ],
+            "version": "RS274X"
+        },
+        {
+            "filename_prefix": "CAMOutputs/DrillFiles",
+            "format_specifier": {
+                "decimal": 3,
+                "integer": 3
+            },
+            "output_type": "drill",
+            "outputs": [
+                {
+                    "drills": {
+                        "NPTH": true,
+                        "PTH": true,
+                        "VIA": true
+                    },
+                    "filename_format": "%P/%N/%N.ncd",
+                    "layers": {
+                        "from": 1,
+                        "to": 16
+                    },
+                    "name": "ncd",
+                    "type": "excellon"
+                }
+            ]
+        },
+        {
+            "filename_prefix": "CAMOutputs/Assembly",
+            "output_type": "assembly",
+            "outputs": [
+            ]
+        },
+        {
+            "filename_prefix": "CAMOutputs/DrawingFiles",
+            "output_type": "drawing",
+            "outputs": [
+            ]
+        }
+    ],
+    "timestamp": "2019-10-10T08:06:48",
+    "type": "EAGLE CAM job",
+    "units": "metric",
+    "version": "9.2.0"
+}
